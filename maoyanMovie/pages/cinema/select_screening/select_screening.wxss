@@ -1,0 +1,260 @@
+/* select_screening.wxss */
+.header{
+    display: flex;
+    align-items: center;
+    height: 130rpx;
+}
+.header image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.header>view:first-child{
+    margin-left: 28rpx;
+    flex-grow: 1;
+}
+.header>view:nth-child(2){
+    margin-right: 26rpx;
+    height: 50rpx;
+    border-left: 1px solid #e4e4e4;
+}
+.header>view:last-child{
+    margin-right: 40rpx;
+    font-size: 22rpx;
+    text-align: center;
+    color: #989898;
+}
+.cinema-name{
+    margin-bottom: 14rpx;
+    font-size: 34rpx;
+}
+.cinema-address{
+    font-size: 26rpx;
+    color: #9a9a9a;
+}
+.banner{
+    overflow: hidden;
+    position: relative;
+    height: 290rpx;
+}
+.banner>image{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 290rpx;
+    z-index: -1;
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    background: url("../../../img/celebrity-default-medium.png") no-repeat center;
+    background-size: 100% 440rpx;
+}
+.movie-cover-wrap{
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.movie-cover-wrap>image{
+    margin-top: 20rpx;
+    width: 180rpx;
+    height: 250rpx;
+    vertical-align: middle;
+    border: 1px solid #ffffff;
+}
+.icon-triangle{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -14rpx;
+    width: 0;
+    height: 0;
+    border-left: 12rpx solid transparent;
+    border-right: 12rpx solid transparent;
+    border-bottom: 12rpx solid #FFFFFF;
+}
+.movie-title{
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 1px solid #dbdbdb;
+}
+.movie-name{
+    font-size: 34rpx;
+    margin-right: 10rpx;
+}
+.movie-grade{
+    font-size: 34rpx;
+    color: #feb312;
+}
+.grade-unit{
+    font-size: 22rpx;
+    color: #feb312;
+}
+.movie-title>view:first-child{
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
+}
+.movie-title>view:last-child{
+    width: 100%;
+    margin-bottom: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26rpx;
+    color: #989898;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.movie-title .separate{
+    width: 0;
+    height: 26rpx;
+    margin: 0 10rpx;
+    border-left: 1px solid #989898;
+}
+
+.scroll{
+    border-bottom: 1px solid #dbdbdb;
+}
+.date{
+    height: 90rpx;
+    font-size: 28rpx;
+    color: #656565;
+    white-space: nowrap;
+
+}
+.date>view{
+    display: inline-block;
+    width: 200rpx;
+    height: 86rpx;
+    line-height: 90rpx;
+    text-align: center;
+    border-bottom: 4rpx solid transparent;
+}
+.date .selectDate{
+    border-bottom-color: #ee4138;
+    color: #ee4138;
+}
+.advertise{
+    display: flex;
+    align-items: center;
+    height: 80rpx;
+    padding: 0 18rpx;
+    background: #fff7ed;
+}
+.advertise>text:first-child{
+    height: 30rpx;
+    margin-right: 20rpx;
+    line-height: 30rpx;
+    padding: 0 8rpx;
+    border-radius: 4rpx;
+    font-size: 20rpx;
+    text-align: center;
+    background: #feb312;
+    color: #ffffff;
+}
+.advertise>text:nth-child(2){
+    flex-grow: 1;
+    font-size: 24rpx;
+    color: #fe9b14;
+}
+.advertise>text:nth-child(3){
+    margin-right: 10rpx;
+    font-size: 24rpx;
+    color: #bebdba;
+}
+.advertise>text:last-child{
+    font-size: 28rpx;
+    font-weight: bold;
+    font-family: '宋体','sans-serif';
+    color: #bebdba;
+}
+.buy-ticket-panel{
+
+}
+.buy-ticket-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30rpx;
+    height: 130rpx;
+    padding-right: 20rpx;
+    font-size: 22rpx;
+    color: #989898;
+    border-bottom: 1px solid #d7d7d7;
+}
+.buy-ticket-item-bg:active{
+    background-color: rgba(100, 112, 125, 0.1)
+}
+.buy-ticket-item-bg:last-child .buy-ticket-item{
+    border-bottom: none;
+}
+.show-time{
+    margin-right: 40rpx;
+}
+.show-time>view:first-child{
+    margin-bottom: 20rpx;
+    font-size: 34rpx;
+    color: #000000;
+}
+.film-format{
+    flex-grow: 1;
+}
+.film-format>view:first-child{
+    margin-bottom: 20rpx;
+    font-size: 28rpx;
+    color: #000000;
+}
+.ticket-price{
+    margin-right: 40rpx;
+}
+.ticket-price .price-wrap{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+.price-wrap .price{
+    margin-right: 10rpx;
+    color: #ee4138;
+}
+.price>text:first-child{
+    font-size: 30rpx;
+}
+.price-privilege{
+    display: flex;
+    width: 120rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    border: 2rpx solid #feb312;
+    border-radius: 2px;
+    font-size: 16rpx;
+    text-align: center;
+}
+.price-privilege>text:first-child{
+    width: 50%;
+    height: 100%;
+    color: #FFFFFF;
+    background: #feb312;
+}
+.price-privilege>text{
+    width: 50%;
+    height: 100%;
+    color: #feb312;
+}
+.buy-ticket-but{
+    width: 90rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    border-radius: 3px;
+    text-align: center;
+    background: #ee4138;
+    color: #FFFFFF;
+}
+
+.errHint{
+    height: 90rpx;
+    line-height: 90rpx;
+    background: #f6f6f6;
+    text-align: center;
+    font-size: 36rpx;
+    color: grey;
+}
+

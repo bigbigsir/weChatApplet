@@ -1,0 +1,86 @@
+<!--select_seat.wxml-->
+<view class="video-hall-info">
+    <view>
+        <view class="cinema-name">{{showInfo.cinemaName}}</view>
+        <view class="show-date">
+            <text>{{showInfo.showTime}}</text>
+            <!--<text>8月12日</text>-->
+            <!--<text>09:45</text>-->
+            <text>{{showInfo.lang}}{{showInfo.tp}}</text>
+        </view>
+    </view>
+</view>
+<view class="selec-seat-hint">
+    <view>
+        <image src="../../../img/seat-white.png"></image>
+        <text>可选</text>
+    </view>
+    <view>
+        <image src="../../../img/seat-red.png"></image>
+        <text>不可选</text>
+    </view>
+    <view>
+        <image src="../../../img/seat-green.png"></image>
+        <text>已选</text>
+    </view>
+</view>
+<view class="seat-panel">
+    <view class="screen">{{showInfo.hallName}}</view>
+    <view class="seat-wrap">
+        <view class="seat-sort">
+            <view
+                wx:key="{{item}}"
+                wx:for="{{seat}}">{{index+1}}</view>
+        </view>
+        <view class="seat">
+            <view class="screen-centre">银幕中央</view>
+            <view
+                catchtap="chooseRow"
+                data-index="{{index}}"
+                class="rows"
+                wx:key="{{item}}"
+                wx:for="{{seat}}">
+                <image
+                    bindtap="chooseColumn"
+                    data-index="{{index}}"
+                    data-item="{{item}}"
+                    wx:key="{{item}}"
+                    wx:for="{{item}}" src="{{item==0?notChoose:choose}}"></image>
+            </view>
+            <view class="center-line"></view>
+            <view class="logo">
+                <image src="../../../img/logo.png"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="placeholder"></view>
+<view class="selec-count-wrap">
+    <view class="selec-count">
+        <view>{{chooseSeat.length==0?'推荐座位':'已选座位'}}</view>
+        <view wx:if="{{chooseSeat.length==0}}" class="selec-seat-buts">
+            <view>1人</view>
+            <view>2人</view>
+            <view>3人</view>
+            <view>4人</view>
+        </view>
+        <view wx:else class="selec-seat-buts color-gray">
+            <view
+                wx:key="{{item}}"
+                wx:for="{{chooseSeat}}">{{item}}
+            </view>
+        </view>
+    </view>
+    
+    <view class="pay-wrap">
+        <view wx:if="{{chooseSeat.length==0}}">一次最多购买四张</view>
+        <view wx:else>
+            <view class="totol-price">
+                <text>{{totolPrice}}</text>
+                <text>元</text>
+            </view>
+            <text class="count">{{Price}}x{{buyNumLimit}}</text>
+        </view>
+        <view catchtap="buyBut" class="pay-but {{chooseSeat.length!==0?'pay-but-color':''}}">{{chooseSeat.length==0?'请先选座':'确认选座'}}</view>
+    </view>
+</view>

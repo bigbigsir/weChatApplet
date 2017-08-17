@@ -1,0 +1,24 @@
+<!--cinema_item_component.wxml-->
+<template name="cinema_item_component">
+    <view class="cinema-item-wrap-bg">
+        <view catchtap="intoSelectScreening" data-movie="{{movie}}" data-cinemaID="{{id}}" class="cinema-item-wrap">
+            <view class="cinema-title">
+                <text class="cinema-name">{{nm}}</text>
+                <text class="ticket-price">29.5</text>
+                <text class="unit">元起</text>
+            </view>
+            <view class="cinema-address">
+                <text>{{addr}}</text>
+                <text>1.4km</text>
+            </view>
+            <view class="cinema-label">
+                <text class="col-cyan">座</text>
+                <text class="col-cyan">IMAX厅</text>
+                <text class="col-cyan">4DX厅</text>
+                <text class="col-yellow">小吃</text>
+                <text class="col-yellow">折扣卡</text>
+            </view>
+        </view>
+    </view>
+</template>
+

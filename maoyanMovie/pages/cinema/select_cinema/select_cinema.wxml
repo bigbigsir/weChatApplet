@@ -1,0 +1,21 @@
+<!--select_cinema.wxml-->
+<import src="../cinema_item_component/cinema_item_component.wxml"/>
+<scroll-view class="scroll" scroll-x>
+    <view class="date">
+        <text class="{{selectDate===1?'selectDate':''}}" catchtap="changeSelectDate" data-date="{{1}}">今天8月12日</text>
+        <text class="{{selectDate===2?'selectDate':''}}" catchtap="changeSelectDate" data-date="{{2}}">今天8月12日</text>
+        <text class="{{selectDate===3?'selectDate':''}}" catchtap="changeSelectDate" data-date="{{3}}">今天8月12日</text>
+        <text class="{{selectDate===4?'selectDate':''}}" catchtap="changeSelectDate" data-date="{{4}}">今天8月12日</text>
+        <text class="{{selectDate===5?'selectDate':''}}" catchtap="changeSelectDate" data-date="{{5}}">今天8月12日</text>
+        <text class="{{selectDate===6?'selectDate':''}}" catchtap="changeSelectDate" data-date="{{6}}">今天8月12日</text>
+        <text class="{{selectDate===7?'selectDate':''}}" catchtap="changeSelectDate" data-date="{{7}}">今天8月12日</text>
+    </view>
+</scroll-view>
+<view>
+    <template
+        wx:key="{{item}}"
+        wx:for="{{cinema}}"
+        data="{{...item}}"
+        is="cinema_item_component">
+    </template>
+</view>

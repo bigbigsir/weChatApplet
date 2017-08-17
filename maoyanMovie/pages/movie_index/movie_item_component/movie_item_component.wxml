@@ -1,0 +1,47 @@
+<!--movie_item_component.wxml-->
+
+<template name="movie_item_component">
+    <view class="movies-item-bg">
+        <view catchtap="intoMovieParticulars" data-movie="{{item}}" class="movies-item">
+            <view class="movie-cover">
+                <image src="{{item.img}}"></image>
+                <image src="../../../img/play.png"></image>
+            </view>
+        
+            <view class="movie-right">
+                <view class="movie-title">
+                    <view>
+                        <text class="movie-name">{{item.nm}}</text>
+                        <view wx:if="{{item.sand||item.imax}}" class="movie-format">
+                            <text  wx:if="{{item.sand}}" class="style-3d">3D</text>
+                            <text wx:if="{{!item.sand&&item.imax}}" class="style-3d">2D</text>
+                            <text wx:if="{{item.imax}}" class="style-imax">IMAX</text>
+                        </view>
+                    </view>
+                    <text wx:if="{{item.sc!==0}}" class="movie-grade">
+                        <text>{{item.sc}}</text>
+                        <text>分</text>
+                    </text>
+                    <text wx:else class="movie-grade">
+                        <text>{{item.wish}}</text>
+                        <text>人想看</text>
+                    </text>
+                </view>
+            
+                <view class="movie-type">
+                    <text>{{item.cat}}</text>
+                </view>
+            
+                <view class="actors">
+                    <text>{{item.star?'主演'+item.star:''}}</text>
+                    <text wx:if="{{item.preSale===0}}" class="red but">购票</text>
+                    <text wx:if="{{item.preSale===1}}" class="blue but">预售</text>
+                </view>
+            
+                <view class="play-times">
+                    <text>{{item.showInfo}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

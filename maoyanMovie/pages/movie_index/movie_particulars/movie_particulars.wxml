@@ -1,0 +1,78 @@
+<!--movie_particulars.wxml-->
+<view class="poster">
+    <image mode="aspectFill" src="{{maoYanMovie.img}}"></image>
+    <view class="movie-info">
+        <view class="movie-cover">
+            <image src="{{maoYanMovie.img}}"></image>
+            <image src="../../../img/play.png">></image>
+        </view>
+        <view>
+            <view class="movie-cnName">{{maoYanMovie.nm}}</view>
+            <view class="movie-enName">{{enName}}</view>
+            <view wx:if="{{maoYanMovie.preSale===0&&maoYanMovie.sc!==0}}" class="grade">
+                <view class="grade-star-wrap">
+                    <view class="star">
+                        <image wx:key="{{item}}" wx:for="{{[1,2,3,4,5]}}" src="../../../img/none-star.png"></image>
+                        <view style="width: {{maoYanMovie.starWidth}}" class="star-cover">
+                            <image wx:key="{{item}}" wx:for="{{[1,2,3,4,5]}}" src="../../../img/star.png"></image>
+                        </view>
+                    </view>
+                    <text>{{maoYanMovie.sc}}</text>
+                </view>
+                <view>({{maoYanMovie.snum}}人评)</view>
+            </view>
+            <view wx:if="{{maoYanMovie.preSale===1||maoYanMovie.sc===0}}" class="wish">{{maoYanMovie.wish}}人想看</view>
+            
+            <view class="movie-type">
+                <view>
+                    <text>{{maoYanMovie.cat}}</text>
+                    <view wx:if="{{movieItem.sand||movieItem.imax}}" class="movie-format">
+                        <text wx:if="{{movieItem.sand}}" class="style-3d">3D</text>
+                        <text wx:if="{{!movieItem.sand&&movieItem.imax}}" class="style-3d">2D</text>
+                        <text wx:if="{{movieItem.imax}}" class="style-imax">IMAX</text>
+                    </view>
+                </view>
+                <view>{{maoYanMovie.src}}/ {{maoYanMovie.dur}}分钟</view>
+                <view>{{maoYanMovie.rt}}大陆上映</view>
+            </view>
+        </view>
+    </view>
+    
+    <view class="but-wrap">
+        <viwe bindtap="changeIsLook" class="but">
+            <image src="{{isLook?red_heart:gray_heart}}">></image>
+            <text class="{{isLook?'isLook':''}}">想看</text>
+        </viwe>
+        <viwe bindtap="changeIsGrade" class="but">
+            <image src="{{isGrade?red_star:gray_star}}">></image>
+            <text class="{{isGrade?'isGrade':''}}">评分</text>
+        </viwe>
+    </view>
+
+</view>
+<view catchtap="changeContentHeight" class="synopsis">
+    <view class="synopsis-content {{changeHeight?'synopsis-content-change':''}}">{{maoYanMovie.dra}}</view>
+    <view class="arrows">
+        <text class="fontIcon {{changeRotate?'fontIcon-change':''}}">﹀</text>
+    </view>
+</view>
+<view class="placeholder"></view>
+<view class="cast">
+    <view class="cast-title">演职人员</view>
+    <scroll-view class="castsImg-scroll" scroll-x>
+        <view class="casts-item-wrap">
+            <view class="casts-item" wx:key="{{item}}" wx:for="{{douBanMovie.directors}}">
+                <image src="{{item.avatars.large}}"></image>
+                <view class="castName">{{item.name}}</view>
+                <view class="role">导演</view>
+            </view>
+            <view class="casts-item" wx:key="{{item}}" wx:for="{{douBanMovie.casts}}">
+                <image src="{{item.avatars.large}}"></image>
+                <view class="castName">{{item.name}}</view>
+                <view class="role">　</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+<view class="placeholder"></view>
+<view catchtap="intoSelectCinema" data-movie="{{movieItem}}" class="buy-ticket">优惠购票</view>

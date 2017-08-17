@@ -1,0 +1,52 @@
+/* cinema_item_component.wxss */
+.cinema-item-wrap{
+    font-size: 28rpx;
+    margin-left: 24rpx;
+    padding: 40rpx 24rpx 40rpx 0;
+    border-bottom: 1px solid #dedede;
+}
+.cinema-item-wrap-bg:active{
+    background-color: rgba(100, 112, 125, 0.1)
+}
+.cinema-item-wrap-bg:last-child .cinema-item-wrap{
+    border-bottom: none;
+}
+.cinema-title{
+    margin-bottom: 20rpx;
+}
+.cinema-name{
+    margin-right: 20rpx;
+    font-size: 34rpx;
+}
+.ticket-price{
+    font-size: 30rpx;
+    color: #ef4f46;
+}
+.unit {
+    font-size: 22rpx;
+    color: #ef4f46;
+}
+.cinema-address{
+    margin-bottom: 18rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+    color: #656565;
+}
+.cinema-address>text:last-child{
+    font-size: 26rpx;
+}
+.cinema-label >text {
+    margin-right: 3px;
+    padding: 2rpx 4rpx;
+    border-radius: 2px;
+    font-size: 22rpx;
+}
+.col-cyan{
+    border: 1px solid #579cae;
+    color: #579cae;
+}
+.col-yellow{
+    border: 1px solid #fe980e;
+    color: #fe980e;
+}

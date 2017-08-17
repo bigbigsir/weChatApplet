@@ -1,0 +1,23 @@
+<!--movieIndex.wxml-->
+
+<import src="movie_item_component/movie_item_component.wxml"/>
+
+<view class="header">
+    <text class="city">成都</text>
+    <view class="menu">
+        <text catchtap="changeMenu" class="{{menuSelected?'menu-selected':''}}">热映</text>
+        <text catchtap="changeMenu1" class="{{menuSelected?'':'menu-selected'}}">待映</text>
+    </view>
+    <view class="searchBut">
+        <icon type="search" size="20" color="red"/>
+    </view>
+</view>
+
+<view class="mainBody">
+    <template
+        wx:for="{{movies}}"
+        wx:key="{{item.id}}"
+        data="{{item}}"
+        is="movie_item_component">
+    </template>
+</view>

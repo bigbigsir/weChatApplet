@@ -1,0 +1,29 @@
+<!--user.wxml-->
+<view class="list">
+    <view>
+        <text>我的订单</text>
+        <text>></text>
+    </view>
+    <view>
+        <text>优惠卷</text>
+        <text>></text>
+    </view>
+    <view>
+        <text>影院会员卡</text>
+        <text>></text>
+    </view>
+</view>
+<view class="list">
+    <view>
+        <text>想看的电影</text>
+        <text>></text>
+    </view>
+    <view>
+        <text>看过的电影</text>
+        <text>></text>
+    </view>
+</view>
+<view class="footer">
+    <text>©猫眼电影 客服电影: </text>
+    <text class="number">1010-5335</text>
+</view>

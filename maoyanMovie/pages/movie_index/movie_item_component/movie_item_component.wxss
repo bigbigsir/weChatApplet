@@ -1,0 +1,114 @@
+/* movie_item_component.wxss */
+
+.movies-item{
+    display: flex;
+    align-items: center;
+    padding: 24rpx 24rpx 24rpx 0;
+    margin-left: 24rpx;
+    border-bottom: 1px solid #ebebeb;
+}
+.movies-item-bg:active{
+    background-color: rgba(100, 112, 125, 0.1)
+}
+.movies-item-bg:last-child .movies-item{
+    border-bottom: none;
+}
+.movie-cover{
+    position: relative;
+}
+.movie-cover>image:first-child{
+    width: 130rpx;
+    height: 180rpx
+}
+.movie-cover>image:last-child{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25rpx;
+    margin-top: -25rpx;
+    width: 50rpx;
+    height: 50rpx
+}
+.movie-right{
+    margin-left: 24rpx;
+    flex-grow: 1;
+    font-size: 12px;
+}
+.movie-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.movie-title>view{
+    display: flex;
+    align-items: center;
+}
+.movie-name{
+    max-width: 300rpx;
+    margin-right: 3px;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.movie-format{
+    display: flex;
+    font-size: 8px;
+    height: 24rpx;
+    border: 1px solid #8ab6cd;
+    border-radius: 2px;
+}
+.movie-format .style-3d{
+    width: 30rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    text-align: center;
+    color: #fcfdfd;
+    background: #8ab6cd ;
+}
+.movie-format .style-imax{
+    width: 50rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    text-align: center;
+    color: #8ab6cd;
+}
+.movie-grade{
+    color: #feb415;
+}
+.movie-grade text:last-child{
+    font-size: 10px;
+}
+.movie-type{
+    margin-top: 6rpx;
+    color: #8d8d8d;
+}
+.actors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.actors text:first-child{
+    max-width: 400rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    color: #878787;
+}
+.actors .but{
+    width: 90rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    text-align: center;
+    border-radius: 3px;
+    color: #fefbfb;
+}
+.actors .red{
+    background: #ee4138;
+}
+.actors .blue{
+    background: #4fb0ee;
+}
+.play-times{
+    color: #9d9d9d;
+}

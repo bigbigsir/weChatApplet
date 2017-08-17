@@ -1,0 +1,94 @@
+<!--select_screening.wxml-->
+<view class="header">
+    <view>
+        <view class="cinema-name">{{cinema.cinemaDetailModel.nm}}</view>
+        <view class="cinema-address">{{cinema.cinemaDetailModel.addr}}</view>
+    </view>
+    <view></view>
+    <view>
+        <image src="../../../img/location.png"></image>
+        <view>地图</view>
+    </view>
+</view>
+<view class="banner">
+    <image src="{{cinema.currentMovie.img}}"></image>
+    <scroll-view scroll-into-view="a1" scroll-x>
+        <view class="movie-cover-wrap">
+            <image src="{{cinema.currentMovie.img}}"></image>
+        </view>
+    </scroll-view>
+    <view class="icon-triangle"></view>
+</view>
+<view class="movie-title">
+    <view>
+        <text class="movie-name">{{cinema.currentMovie.nm}}</text>
+        <text class="movie-grade">{{cinema.currentMovie.sc}}</text>
+        <text class="grade-unit">分</text>
+    </view>
+    <view>
+        <text>{{movie.dur}}分钟</text>
+        <text class="separate"></text>
+        <text>{{movie.cat}}</text>
+        <text class="separate"></text>
+        <text>{{movie.star}}</text>
+    </view>
+</view>
+<scroll-view class="scroll" scroll-x>
+    <view class="date">
+        <view
+            class="{{selectDate===item.slug?'selectDate':''}}"
+            catchtap="changeSelectDate"
+            data-date="{{item.slug}}"
+            wx:key="{{item}}"
+            wx:for="{{cinema.Dates}}">{{item.text}}
+        </view>
+    </view>
+</scroll-view>
+<view class="advertise">
+    <text>折扣卡</text>
+    <text>购票享低价，首单最高立减30元</text>
+    <text>30元开卡</text>
+    <text>></text>
+</view>
+
+<view class="buy-ticket-panel">
+    <view
+        wx:if="{{dateShow.length!==0}}"
+        wx:for="{{dateShow}}"
+        wx:key="{{item}}"
+        class="buy-ticket-item-bg">
+        <view
+            catchtap="intoSelectSeat"
+            data-showDate="{{item.showDate}}"
+            data-showId="{{item.showId}}"
+            data-movieName="{{cinema.currentMovie.nm}}"
+            class="buy-ticket-item">
+            
+            <view class="show-time">
+                <view>{{item.tm}}</view>
+                <view>{{item.end}}散场</view>
+            </view>
+            <view class="film-format">
+                <view>{{item.lang}}{{item.tp}}</view>
+                <view>{{item.th}}</view>
+            </view>
+            
+            <view class="ticket-price">
+                <view class="price-wrap">
+                    <view class="price">
+                        <text>40</text>
+                        <text>元</text>
+                    </view>
+                    <view class="price-privilege">
+                        <text>折扣卡</text>
+                        <text>34.5元</text>
+                    </view>
+                </view>
+                <view>折扣卡首单特惠</view>
+            </view>
+            <view class="buy-ticket-but">购票</view>
+        </view>
+    </view>
+    <view class="errHint" wx:if="{{dateShow&&dateShow.length===0}}">今天暂无场次</view>
+</view>
+

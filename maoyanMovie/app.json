@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/movie_index/movieIndex",
+    "pages/cinema/select_seat/select_seat",
+
+    "pages/cinema/select_screening/select_screening",
+    "pages/movie_index/movie_particulars/movie_particulars",
+    "pages/cinema/select_cinema/select_cinema",
+    "pages/cinema/cinema",
+    "pages/user/user",
+    "pages/index/index",
+    "pages/logs/logs"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "welcome",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8A8A8A",
+    "selectedColor": "#ee4138",
+    "borderStyle": "black",
+    "backgroundColor": "#f6f6f9",
+    "list": [
+      {
+        "pagePath": "pages/movie_index/movieIndex",
+        "text": "电影",
+        "iconPath": "./img/movie-gray.png",
+        "selectedIconPath": "./img/movie-red.png"
+      },
+      {
+        "pagePath": "pages/cinema/cinema",
+        "text": "影院",
+        "iconPath": "./img/cinema-gray.png",
+        "selectedIconPath": "./img/cinema-red.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "./img/user-gray.png",
+        "selectedIconPath": "./img/user-red.png"
+      }
+    ]
+  }
+}

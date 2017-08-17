@@ -1,0 +1,14 @@
+<!--cinema.wxml-->
+<import src="cinema_item_component/cinema_item_component.wxml"/>
+<view class="search">
+    <text>成都</text>
+    <view></view>
+    <input type="text" placeholder-class="placeholder" placeholder="找影院"/>
+</view>
+
+<template
+    wx:key="{{item}}"
+    wx:for="{{cinema}}"
+    data="{{...item}}"
+    is="cinema_item_component">
+</template>

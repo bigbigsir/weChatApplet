@@ -1,0 +1,258 @@
+/* movie_particulars.wxss */
+page{
+    padding-bottom: 100rpx;
+}
+.poster{
+    position: relative;
+    height: 392rpx;
+    padding: 24rpx 30rpx;
+    background: rgba(0, 0, 0, 0.4);
+}
+.poster>image{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 440rpx;
+    z-index: -1;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    background: url("../../../img/celebrity-default-medium.png") no-repeat center;
+    background-size: 100% 440rpx;
+}
+.movie-info{
+    display: flex;
+    align-items: center;
+    color: #a3abb3;
+}
+.movie-cover{
+    position: relative;
+    margin-right: 30rpx;
+}
+.movie-cover>image:first-child{
+    width: 220rpx;
+    height: 300rpx;
+    border: 1rpx solid rgba(100, 106, 114, 0.47);
+    background: url("../../../img/celebrity-default-medium.png") no-repeat center;
+    background-size: 220rpx 300rpx;
+}
+.movie-cover>image:last-child{
+    position: absolute;
+    left: 50%;
+    top: 125rpx;
+    margin-left: -40rpx;
+    width: 80rpx;
+    height: 80rpx
+}
+.movie-cnName,.movie-enName{
+    color: #ffffff;
+}
+.movie-cnName{
+    width: 400rpx;
+    font-size: 34rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.movie-enName{
+    width: 400rpx;
+    font-size: 20rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.grade{
+    margin: 20rpx 0;
+}
+.grade>view{
+    font-size: 16rpx;
+}
+.grade-star-wrap{
+    display: flex;
+    align-items: center;
+}
+.grade-star-wrap image{
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 6rpx;
+}
+.grade-star-wrap>text{
+    font-size: 30rpx;
+    color: #fec515;
+}
+.wish{
+    margin: 20rpx 0;
+    font-size: 30rpx;
+    color: #fec515;
+}
+.star{
+    position: relative;
+    height: 26rpx;
+}
+.star-cover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 26rpx;
+    white-space:nowrap;
+    overflow: hidden;
+}
+.movie-type{
+    font-size: 25rpx;
+}
+.movie-type>view:first-child{
+    display: flex;
+    align-items: center;
+}
+.movie-format{
+    margin-left: 8rpx;
+    display: inline-flex;
+    font-size: 8px;
+    height: 24rpx;
+    border: 1px solid #968e8b;
+    border-radius: 2px;
+}
+.movie-format .style-3d{
+    width: 30rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    text-align: center;
+    color: #fcfdfd;
+    background: #968e8b;
+}
+.movie-format .style-imax{
+    width: 50rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    text-align: center;
+    color: #fcfdfd;
+}
+.but-wrap{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24rpx;
+}
+.but{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 330rpx;
+    height: 60rpx;
+    color: #fbfbfb;
+    border: 1rpx solid rgba(100, 112, 125);
+    border-radius: 6rpx;
+    background-color: rgba(100, 112, 125, 0.6);
+}
+.but>image{
+    width: 30rpx;
+    height: 30rpx
+}
+.but>text{
+    margin-left: 10rpx;
+}
+.isLook {
+    color: #d81e06;
+}
+.isGrade {
+    color: #ffcb3c;
+}
+.but:active{
+    background-color: rgba(100, 112, 125, 0.4)
+}
+.synopsis {
+    font-size: 30rpx;
+    color: #000000;
+    padding: 24rpx 40rpx 4rpx 30rpx;
+}
+.synopsis-content{
+    line-height: 50rpx;
+    max-height: 150rpx;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    -moz-transition-transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s;
+    -o-transition: max-height 0.5s;
+}
+.synopsis-content-change{
+    max-height: 500rpx;
+
+    ord-break: break-all;
+    text-overflow: ellipsis;
+    /*display: -webkit-box; !** 对象作为伸缩盒子模型显示 **!*/
+    /*-webkit-box-orient: vertical; !** 设置或检索伸缩盒对象的子元素的排列方式 **!*/
+    /*-webkit-line-clamp: 10; !** 显示的行数 **!*/
+}
+.arrows{
+    text-align: center;
+    color: #cbcbcb;
+}
+.arrows>.fontIcon{
+    transition: all 0.2s;
+    display: inline-block;
+}
+.fontIcon-change{
+    transform: rotate(180deg);
+}
+.placeholder{
+    height: 30rpx;
+    background: #f4f4f4;
+}
+.cast {
+    padding: 24rpx 0 24rpx 0;
+}
+.cast-title {
+    margin-left: 30rpx;
+    margin-bottom: 24rpx;
+    font-size: 30rpx;
+}
+.castsImg-scroll {
+    width: 100%;
+    font-size: 22rpx;
+}
+.castsImg-scroll image{
+    width: 140rpx;
+    height: 180rpx;
+    background: url("../../../img/celebrity-default-medium.png");
+    background-size: 140rpx 180rpx;
+}
+.casts-item-wrap{
+    margin-left: 30rpx;
+    white-space:nowrap;
+}
+.casts-item{
+    display: inline-block;
+}
+.casts-item>view{
+    text-align: center;
+}
+.casts-item-wrap>view{
+    margin-right: 16rpx;
+}
+.casts-item-wrap>view:last-child {
+    margin-right: 50rpx;
+}
+.castName{
+    width: 140rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    margin-top: 20rpx;
+}
+.role{
+    margin-top: 4rpx;
+    color: #9e9e9e;
+}
+.buy-ticket{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 36rpx;
+    text-align: center;
+    color: #fefefe;
+    background: #ee4138;
+}

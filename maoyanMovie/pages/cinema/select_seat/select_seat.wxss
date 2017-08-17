@@ -1,0 +1,215 @@
+/* select_seat.wxss */
+page{
+    position: relative;
+    height:100%;
+    overflow: hidden;
+}
+.video-hall-info{
+    display: flex;
+    align-items: center;
+    height: 120rpx;
+    margin: 0 30rpx;
+    border-bottom: 1px solid #dcdcdc;
+}
+.cinema-name{
+    font-size: 34rpx;
+    margin-bottom: 12rpx;
+}
+.show-date{
+    font-size: 24rpx;
+    color: #9a9a9a;
+}
+.show-date>text{
+    margin-right: 10rpx;
+}
+.selec-seat-hint{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70rpx;
+}
+.selec-seat-hint>view{
+    display: flex;
+    align-items: center;
+    margin-right: 40rpx;
+    font-size: 26rpx;
+}
+.selec-seat-hint image{
+    width: 34rpx;
+    height: 34rpx;
+    margin-right: 8rpx ;
+}
+.seat-panel{
+    height: 750rpx;
+    background: #efefef;
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+}
+.seat-panel image{
+    width: 46rpx;
+    height: 46rpx;
+    margin-right: 12rpx ;
+}
+.screen{
+    width: 320rpx;
+    height: 40rpx;
+    margin: 0 auto 50rpx;
+    line-height: 40rpx;
+    border-bottom-right-radius: 40rpx;
+    border-bottom-left-radius: 40rpx;
+    font-size: 26rpx;
+    text-align: center;
+    background: #dbdbdb;
+}
+.seat-wrap{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.seat-sort{
+    position: absolute;
+    left: 20rpx;
+    top: 20rpx;
+    padding: 14rpx 0;
+    border-radius: 20px;
+    background: #c2c2c2;
+}
+.seat-sort>view{
+    width: 46rpx;
+    height: 46rpx;
+    margin-bottom: 6rpx;
+    line-height: 46rpx;
+    font-size: 34rpx;
+    text-align: center;
+    color: white;
+}
+.seat{
+    position: relative;
+    padding-top: 34rpx;
+    padding-bottom: 80rpx;
+}
+.rows{
+    display: flex;
+    margin-bottom: 6rpx;
+}
+.rows>image:last-child{
+    margin-right: 0;
+}
+.screen-centre{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100rpx;
+    height: 30rpx;
+    margin-left: -50rpx;
+    line-height: 30rpx;
+    font-size: 16rpx;
+    border-radius: 2px;
+    text-align: center;
+    background: #dfdfdf;
+    color: #7b7b7b;
+}
+.logo{
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    margin-left: -105rpx;
+}
+.logo>image{
+    width: 210rpx;
+    height: 60rpx;
+}
+.center-line{
+    position: absolute;
+    left: 50%;
+    top:30rpx;
+    margin-right: 1rpx;
+    width: 0;
+    height: 560rpx;
+    border-left: 2rpx dashed #d4d4d4;
+}
+
+
+
+
+.placeholder{
+    height: 220rpx;
+}
+.selec-count-wrap{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 220rpx;
+}
+
+.selec-count{
+    margin: 0 28rpx;
+    border-bottom: 1px solid #e5e5e5;
+}
+.selec-count>view:first-child{
+    margin-bottom:14rpx;
+    font-size: 24rpx;
+    color: #656565;
+}
+.selec-seat-buts{
+    display: flex;
+    align-items: center;
+    margin-bottom: 14rpx;
+}
+.selec-seat-buts>view{
+    width: 136rpx;
+    height: 60rpx;
+    margin-right: 20rpx;
+    line-height: 60rpx;
+    font-size: 26rpx;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    text-align: center;
+    color: #000000;
+}
+.color-gray>view{
+    color: #656565;
+}
+.pay-wrap{
+    margin: 0 28rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90rpx;
+    font-size: 28rpx;
+    color: #989898;
+}
+.pay-but{
+    width: 300rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 5px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #fed599;
+    font-size: 32rpx;
+}
+
+.pay-but-color{
+    background: #fe980e;
+}
+.totol-price{
+    color: #ee4138;
+}
+.totol-price>text:first-child{
+    font-size: 38rpx;
+    font-weight: bold;
+}
+.totol-price>text:last-child{
+    font-size: 22rpx;
+}
+.count{
+    font-size: 22rpx;
+}
+
+
+
+.total-prices{
+
+}

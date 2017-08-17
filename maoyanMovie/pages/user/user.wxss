@@ -1,0 +1,47 @@
+/* user.wxss */
+page{
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    background: #f4f4f4;
+    font-family: "Microsoft YaHei UI",'sans-serif';
+}
+.list{
+    margin-top: 20rpx;
+    padding-left: 30rpx;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 30rpx;
+    background: #ffffff;
+}
+.list>view{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90rpx;
+    border-top: 1px solid #dbdbdb;
+}
+.list>view:first-child{
+    border-top: none;
+}
+.list>view text:last-child{
+    margin-right: 30rpx;
+    font-size: 30rpx;
+    font-weight: 900;
+    font-family: '宋体','sans-serif';
+    color: #cbcbcb;
+}
+.footer{
+    position: absolute;
+    left: 0;
+    bottom:30rpx;
+    width: 100%;
+    text-align: center;
+    font-size: 26rpx;
+    color: #989898;
+}
+.number{
+    text-decoration: underline;
+    color: #f9c870;
+}
